@@ -24,25 +24,24 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('inspire')
-                 ->hourly();
+        // $schedule->command('inspire')
+        //          ->hourly();
 
         // // Use a closure
         // $schedule->call(function () {
         //     DB::table('recent_users')->delete();
         // })->daily();
 
-        // // Use a closure
-        // $schedule->call(function () {
-        //     DB::table('recent_users')->delete();
-        // })->daily();
 
         // // Issue a command to the Operating System
-        // $schedule->exec('node /home/forge/script.js')->daily();
+        // $schedule->exec('mkdir prosper')->daily();
 
         // // Chaining execution like so
         // $schedule->call(function () {
-        //     // Runs once a week on Monday at 13:00...
+        //     Mail::raw("I am sending the email right now", function($message) {
+        //         $message->from('temitope@gmail.com', 'Laravel Scheduling');
+        //         $message->to('prosperotemuyiwa@gamil.com');
+        //     });
         // })->weekly()->mondays()->at('13:00');
     }
 }

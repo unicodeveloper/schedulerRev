@@ -13,7 +13,7 @@ class Inspire extends Command
      *
      * @var string
      */
-    protected $signature = 'inspire';
+    protected $signature = 'prosper:inspire';
 
     /**
      * The console command description.
@@ -29,15 +29,11 @@ class Inspire extends Command
      */
     public function handle()
     {
-        $this->comment(PHP_EOL.Inspiring::quote().PHP_EOL);
-        $information = 'Inspire Prosper to continue gingering';
+        $information = 'Inspire Heroku to continue sending more emails';
 
-        //shell_exec('mkdir prosper');
-
-        Mail::raw('Do it again ooo', function ($message) {
-            $message->from('prosper.otemuyiwa@andela.com', 'Scheduling Laravel');
-
-            $message->to('prosperotemuyiwa@gmail.com');
+         Mail::raw($information, function($message) {
+                $message->from('temitope@gmail.com', 'Scheduling Tasks on Heroku');
+                $message->to('prosperotemuyiwa@gamil.com');
         });
     }
 }
